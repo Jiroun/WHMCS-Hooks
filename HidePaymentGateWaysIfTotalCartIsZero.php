@@ -23,6 +23,7 @@ add_hook('ClientAreaPageCart', 1, function($vars) {
     document.querySelector("'.$v.'").checked = true;
     const PGC = document.getElementById("paymentGatewaysContainer");
     PGC.style.display = "none";
+</script>
     ';
         return $return;
         }); 
