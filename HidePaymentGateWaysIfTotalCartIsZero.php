@@ -9,7 +9,9 @@ if (!defined("WHMCS"))
     die("This file cannot be accessed directly");
 
 
-// IF you Want to Select PayPal TO hide Credit Card InputFields USE THIS HOOK
+// You Will need to select Payment Mithod something another that credit card like paypal or paypalcheckout
+// edit to paypalcheckout if you using this module 
+
 add_hook('ClientAreaPageCart', 1, function($vars) {
     
     if ($vars['rawtotal'] == 0.00)
@@ -28,25 +30,24 @@ add_hook('ClientAreaPageCart', 1, function($vars) {
 });
 
 
-// OR USE THIS WILL HIDE Credit Card InputFields AFTER 1 SECOND 
-add_hook('ClientAreaPageCart', 1, function($vars) {
+// add_hook('ClientAreaPageCart', 1, function($vars) {
     
-    if ($vars['rawtotal'] == 0.00)
-    {
-        add_hook('ClientAreaFooterOutput', 1, function($vars) {
+//     if ($vars['rawtotal'] == 0.00)
+//     {
+//         add_hook('ClientAreaFooterOutput', 1, function($vars) {
             
-        $return = '
-<script>
-    const PGC = document.getElementById("paymentGatewaysContainer");
-    PGC.style.display = "none";
-    setTimeout(function(){
-        const CCIF = document.getElementById("creditCardInputFields");
-        CCIF.style.display = "none"; 
-}, 1000);
-</script>
-    ';
-        return $return;
-        }); 
-    }
+//         $return = '
+// <script>
+//     const PGC = document.getElementById("paymentGatewaysContainer");
+//     PGC.style.display = "none";
+//     setTimeout(function(){
+//         const CCIF = document.getElementById("creditCardInputFields");
+//         CCIF.style.display = "none"; 
+// }, 1000);
+// </script>
+//     ';
+//         return $return;
+//         }); 
+//     }
     
-});
+// });
