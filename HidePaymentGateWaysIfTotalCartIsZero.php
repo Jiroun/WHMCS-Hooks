@@ -16,11 +16,11 @@ add_hook('ClientAreaPageCart', 1, function($vars) {
         add_hook('ClientAreaFooterOutput', 1, function($vars) {
             
         $return = '
-    <script>
-const PGC = document.getElementById("paymentGatewaysContainer");
-const CCIF = document.getElementById("creditCardInputFields");
-PGC.style.display = "none";
-CCIF.style.display = "none";
+<script>
+    const PGC = document.getElementById("paymentGatewaysContainer");
+    const CCIF = document.getElementById("creditCardInputFields");
+    PGC.style.display = "none";
+    CCIF.style.display = "none";
 </script>
     ';
         return $return;
