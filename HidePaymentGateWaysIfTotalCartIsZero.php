@@ -1,6 +1,6 @@
 <?php
 /**
- * Hide paymentGateways And credit Card InputFields When Total at Cart Checkout is Zero
+ * Hide paymentGateways When Total at Cart Checkout is Zero
  * @package     WHMCS
  * @author      Aladdin Jiroun
  */
