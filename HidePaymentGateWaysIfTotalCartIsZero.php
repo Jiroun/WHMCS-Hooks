@@ -9,7 +9,7 @@ if (!defined("WHMCS"))
     die("This file cannot be accessed directly");
 
 
-// You Will need to select Payment Mithod something another that credit card like paypal or paypalcheckout
+// You Will need to select Payment Method something other than credit card like paypal or paypalcheckout
 // edit to paypalcheckout if you using this module 
 
 add_hook('ClientAreaPageCart', 1, function($vars) {
