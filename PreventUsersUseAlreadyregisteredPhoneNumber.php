@@ -1,6 +1,6 @@
 <?php
 /**
- * Prevent Users Use phone number that already resigeted with another user
+ * Prevent Users Use phone number that already registered with another user
  * @package     WHMCS
  * @author      Aladdin Jiroun
  */
